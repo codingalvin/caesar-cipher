@@ -1,15 +1,16 @@
 #defining vars and collecting input
+key,loop,secondloop,output,keyinput=[],0,0,[],""
 text = input("plain text:  ")
 shift = int(input("shift integer:  ")) #beween 0 - 126
 keyinput = input("key here:  ")
-key,loop,secondloop,output=[],0,0,[]
 
 #insert key using for loop
+if keyinput == "":
+    key=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," "]
+length_key = len(key)
 for keyletter in keyinput:
     key.append(keyletter)
 print(key)
-length_key = 26#len(key)
-key=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
 #key generation
 while loop < 100:
