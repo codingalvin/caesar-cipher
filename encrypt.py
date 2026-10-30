@@ -1,5 +1,5 @@
 #defining vars and collecting input
-key,loop,secondloop,output,keyinput=[],0,0,[],""
+key,loop,output=[],0,[]
 text = input("plain text:  ")
 shift = int(input("shift integer:  ")) #beween 0 - 126
 keyinput = input("key here:  ")
@@ -18,15 +18,12 @@ while loop < 100:
     loop = loop + 1
 
 #analyzing the text
-for currenti in text:
-    secondloop = 0
-    while secondloop<length_key:
-        if key[secondloop] == currenti:
-            a= key.index(currenti)
-            output.append(str(a+shift))
+for currentinput in text:
+    for currentkey in key:
+        if currentkey == currentinput:
+            output.append(str(key.index(currentinput)+shift))
             output.append(" ")
-            a=0
-        secondloop = secondloop +1
+            break
 
 #displaying output
 print(''.join(output))

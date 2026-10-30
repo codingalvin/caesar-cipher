@@ -1,5 +1,5 @@
 #defining vars and collecting input
-key,loop,secondloop,output,keyinput=[],0,0,[],""
+key,loop,output=[],0,[]
 text = input("ciphertext:  ")
 shift = int(input("shift integer:  ")) #between 0 - 126
 keyinput = input("key:  ")
@@ -23,9 +23,8 @@ for currentinput in input:
     secondloop = 0
     for _ in key:
         if str(secondloop) == currentinput:
-            a=int(currentinput)
-            output.append(key[a-shift])
-            a=0
+            output.append(key[int(currentinput)-shift])
+            break
         secondloop = secondloop + 1
 
 #displaying output
