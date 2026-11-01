@@ -19,11 +19,7 @@ while loop < 100:
 
 #analyzing the text
 for currentinput in text:
-    for currentkey in key:
-        if currentkey == currentinput:
-            output.append(str(key.index(currentinput)+shift))
-            output.append(" ")
-            break
+    output.append(str(key.index(currentinput)+shift))
 
 #displaying output
-print(''.join(output))
+print(' '.join(output))
