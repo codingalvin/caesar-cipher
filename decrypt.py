@@ -8,8 +8,10 @@ input = text.split()
 #insert key using for loop
 if keyinput == "":
     key=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," "]
-for keyletter in keyinput:
-    key.append(keyletter)
+else:
+    key=keyinput.split()
+#for keyletter in keyinput:
+    #key.append(keyletter)
 print(key)
 
 #key generation
@@ -20,12 +22,6 @@ while loop < 100:
 
 #analyzing the text
 for currentinput in input:
-    secondloop = 0
-    for _ in key:
-        if str(secondloop) == currentinput:
-            output.append(key[int(currentinput)-shift])
-            break
-        secondloop = secondloop + 1
+    output.append(key[int(currentinput)-shift])
 
-#displaying output
 print(''.join(output))
